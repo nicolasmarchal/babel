@@ -4,6 +4,6 @@
 ![alt text][logo1]
 ![alt text][logo2]
 
-[logo]: ./Screenshot/Signin.png
-[logo1]: ./Screenshot/signup.png
-[logo2]: ./Screenshot/homeScreen.png
+[logo]: ./screenshot/Signin.png
+[logo1]: ./screenshot/signup.png
+[logo2]: ./screenshot/homeScreen.png
