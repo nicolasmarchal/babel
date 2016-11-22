@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Init</class>
+ <widget class="QWidget" name="Init">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>500</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <widget class="QLabel" name="background">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>500</width>
+     <height>600</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="pixmap">
+    <pixmap resource="../resources/resources.qrc">:/Login/Images/Login/Background.png</pixmap>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label">
+   <property name="geometry">
+    <rect>
+     <x>70</x>
+     <y>40</y>
+     <width>361</width>
+     <height>141</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="pixmap">
+    <pixmap resource="../resources/resources.qrc">:/Login/Images/Login/Image-1.png</pixmap>
+   </property>
+   <property name="scaledContents">
+    <bool>false</bool>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="password">
+   <property name="geometry">
+    <rect>
+     <x>110</x>
+     <y>384</y>
+     <width>279</width>
+     <height>40</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Montserrat</family>
+     <pointsize>10</pointsize>
+     <weight>50</weight>
+     <italic>false</italic>
+     <bold>false</bold>
+    </font>
+   </property>
+   <property name="focusPolicy">
+    <enum>Qt::StrongFocus</enum>
+   </property>
+   <property name="autoFillBackground">
+    <bool>false</bool>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">#password
+{
+background-color: rgba(255, 255, 255, 0.1);
+border-radius: 20px;
+color: white;
+font-size: 16px;
+padding: 10px 20px;
+font: 10pt &quot;Montserrat&quot;;
+}
+
+#password:focus
+{
+	border: 2px solid #ffffff;
+}
+
+</string>
+   </property>
+   <property name="placeholderText">
+    <string>Server Port</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="username">
+   <property name="geometry">
+    <rect>
+     <x>110</x>
+     <y>301</y>
+     <width>279</width>
+     <height>40</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Montserrat</family>
+     <pointsize>10</pointsize>
+     <weight>50</weight>
+     <italic>false</italic>
+     <bold>false</bold>
+    </font>
+   </property>
+   <property name="focusPolicy">
+    <enum>Qt::StrongFocus</enum>
+   </property>
+   <property name="autoFillBackground">
+    <bool>false</bool>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">#username
+{
+background-color: rgba(255, 255, 255, 0.1);
+border-radius: 20px;
+color: white;
+font-size: 16px;
+padding: 10px 20px;
+font: 10pt &quot;Montserrat&quot;;
+}
+
+#username:focus
+{
+	border: none;
+	border: 2px solid #ffffff;
+}
+
+</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="placeholderText">
+    <string>Server IP Adress</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="registerButton">
+   <property name="geometry">
+    <rect>
+     <x>110</x>
+     <y>492</y>
+     <width>279</width>
+     <height>40</height>
+    </rect>
+   </property>
+   <property name="cursor">
+    <cursorShape>PointingHandCursor</cursorShape>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">#registerButton
+{
+	background-color: #33495f;
+	border-radius: 20px;
+	color: white;
+	font-size: 16px;
+	font: 12pt &quot;Montserrat&quot;;
+}
+
+#registerButton:hover
+{
+	background-color: rgb(81, 117, 152);
+}
+
+#registerButton:pressed
+{
+	border: 2px solid #ffffff;
+}</string>
+   </property>
+   <property name="text">
+    <string>Connect</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="errorUsername">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>345</y>
+     <width>500</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color: #f44336;
+font: 12pt &quot;Montserrat&quot;;
+qproperty-alignment: AlignCenter;</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="errorUsername_2">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>428</y>
+     <width>500</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color: #f44336;
+font: 12pt &quot;Montserrat&quot;;
+qproperty-alignment: AlignCenter;</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="errorUsername_3">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>563</y>
+     <width>500</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color: #f44336;
+font: 12pt &quot;Montserrat&quot;;
+qproperty-alignment: AlignCenter;</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <zorder>background</zorder>
+  <zorder>label</zorder>
+  <zorder>username</zorder>
+  <zorder>registerButton</zorder>
+  <zorder>errorUsername</zorder>
+  <zorder>errorUsername_2</zorder>
+  <zorder>errorUsername_3</zorder>
+  <zorder>password</zorder>
+ </widget>
+ <tabstops>
+  <tabstop>username</tabstop>
+  <tabstop>password</tabstop>
+  <tabstop>registerButton</tabstop>
+ </tabstops>
+ <resources>
+  <include location="../resources/resources.qrc"/>
+ </resources>
+ <connections/>
+</ui>

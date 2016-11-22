@@ -1,0 +1,103 @@
+CLIENT -> SERVER
+_________________
+Instructions		Code	Param			Response	Error
+-------------		----	-----			-------		-----
+Register		01	user password		ok-error	401
+Login			02	user password		ok-error	402-403-408
+Logout			03	/			/
+getContactList		04	/			contact (les contacts sont envoyés un par un)
+AddContact		05	userToAdd		ok-error	402-405-409
+DelContact		06	userToDel		ok-error	402
+RepContact		07	userWhoAdd Rep		/
+SendCall		08	userToCall port		ok-error	406-407
+ResponseCall		09	userWhoCall Rep		/
+EndCall			10	UserWhoQuit		/
+SendText		11	UserToText text		ok-error	402
+getAllContact		12	/			contact (les contacts sont envoyés un par un)
+getContactOnline	13	/			contact (les contacts sont envoyés un par un)
+_________________
+
+
+SERVER -> CLIENT
+_________________
+Instructions		Code	Param
+-------------		----	-----
+AddContact		105	userWhoAdd
+RepContact		107	userAdded Response
+sendCall		108	userWhoWantCall ip port
+ResponseCall		109	userWhoRespond response
+EndCall			110	userWhoQuit
+ReceiveText		111	userWhoText text
+newConnexion		113	contact (envoie la nouvelle connexion à toute personne ayant ce client sans ses contacts)
+delConnexion		114	contact (envoie la deconnexion à toute personne ayant ce client sans ses contacts)
+
+CLIENT -> CLIENT
+_________________
+Code
+----
+601	magic + code + int(size -> pour savoir de combien on doit lire) + data(unsigned char[256])
+
+typedef	struct	   s_call
+{
+  t_check	   check;
+  int		   size;
+  unsigned char	   buff[256];
+}		   t_call;
+
+ERROR CODE
+_________________
+Code		 	Error
+----			-----
+401			username already exist
+402			username don't exist
+403			bad password
+404			unknown
+405			already in your contacts
+406			user offline
+407			user already in call
+408			User is already connected
+409			You can't add yourself
+
+PACKET : HEADER + CODE + DATA
+	 0x42(int) code(int)
+
+
+TYPE RESPONSE
+-------------
+ok (int) : 0
+error(int): voir CODE ERROR
+nb (int)
+contact char[64]
+
+
+01-02
+________
+user:		char [64]
+password:	char [64]
+
+05-06-10
+________
+user: char[64]
+
+07-09
+________
+user: char[64]
+rep : int 0(oui) | 1(non)
+
+08
+_________
+user: char [64]
+ip: char[64]
+port: int
+
+11
+_________
+user: char[64]
+text: char[1024]
+
+COPYRIGHT EPITECH MARSEILLE PROMO 2019
+POUR TOUTE SUGGESTION/MODIFICATION MERCI D'ENVOYER UN MAIL:
+nicolas.marchal@epitech.eu
+jeremie.mortier@epitech.eu
+alexis.thirion@epitech.eu
+

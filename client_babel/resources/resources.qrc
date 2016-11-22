@@ -1,0 +1,29 @@
+<RCC>
+    <qresource prefix="/Login">
+        <file>Images/Login/hide.png</file>
+        <file>Images/Login/view.png</file>
+        <file>Font/Montserrat-Regular.ttf</file>
+        <file>Images/Login/underline.png</file>
+        <file>Images/Login/underline2.png</file>
+        <file>Images/Login/Background.png</file>
+        <file>Images/Login/Image-1.png</file>
+        <file>Images/Login/error.png</file>
+        <file>Images/Login/success.png</file>
+    </qresource>
+    <qresource prefix="/Form">
+        <file>Images/Form/user.png</file>
+        <file>Images/Form/plus.png</file>
+        <file>Images/Form/plusGreen.png</file>
+        <file>Images/Form/loading.gif</file>
+        <file>Images/Form/minus.png</file>
+        <file>Images/Form/minusRevert.png</file>
+        <file>Images/Form/call.png</file>
+        <file>Images/Form/callInvert.png</file>
+        <file>Images/Form/phone-call.png</file>
+        <file>Images/Form/call.gif</file>
+        <file>Images/Form/end-call.png</file>
+    </qresource>
+    <qresource prefix="/">
+        <file>Images/icon.ico</file>
+    </qresource>
+</RCC>
